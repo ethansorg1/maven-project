@@ -8,6 +8,7 @@
     <groupId>com.example.maven-project</groupId>
     <artifactId>server</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging> <!-- Ensures WAR file is generated -->
 
     <dependencies>
         <!-- Fixed: Added missing version -->
@@ -36,6 +37,13 @@
 
     <build>
         <plugins>
+            <!-- Added Maven WAR Plugin to generate WAR file -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
+            </plugin>
+
             <!-- Fixed: Added missing version for Jetty plugin -->
             <plugin>
                 <groupId>org.mortbay.jetty</groupId>
